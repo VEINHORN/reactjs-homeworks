@@ -1,8 +1,8 @@
 import "./App.css";
-import FrameworksList from "./components/FrameworksList";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  return <FrameworksList />;
+  return <HomePage />;
 }
 
 export default App;
