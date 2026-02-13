@@ -12,6 +12,7 @@ import { PublicRoute } from "./components/PublicRoute/PublicRoute.jsx";
 import { store } from "./store";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "./theme/ThemeProvider";
+import "./i18n/config";
 
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>

@@ -6,10 +6,13 @@ import { useAuth } from "../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router";
 import type React from "react";
 import { ThemeToggle } from "./ThemeToggle/ThemeToggle";
+import { LanguageDropdown } from "./LanguageDropdown/LanguageDropdown";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const navigate = useNavigate();
   const { isAuthenticated, loading, logout } = useAuth();
+  const { t } = useTranslation();
 
   const handleLogout = async (e: React.MouseEvent) => {
     e.preventDefault();
@@ -26,18 +29,25 @@ const Header = () => {
         <div className={styles.navLinksWrapper}>
           <Navigation
             items={[
-              { label: "Home", path: "/" },
-              { label: "Menu", path: "/menu" },
-              { label: "Company" },
+              { label: t("header.home"), path: "/" },
+              { label: t("header.menu"), path: "/menu" },
+              { label: t("header.company") },
               ...(isAuthenticated
-                ? [{ label: "Logout", path: "/logout", onClick: handleLogout }]
-                : [{ label: "Login", path: "/login" }]),
+                ? [
+                    {
+                      label: t("header.logout"),
+                      path: "/logout",
+                      onClick: handleLogout,
+                    },
+                  ]
+                : [{ label: t("header.login"), path: "/login" }]),
             ]}
           />
 
           <div className={styles.btnWrapper}>
             <Bucket />
             <ThemeToggle />
+            <LanguageDropdown />
           </div>
         </div>
       </div>

@@ -1,0 +1,93 @@
+{
+  "header": {
+    "home": "Home",
+    "menu": "Menu",
+    "company": "Company",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "home": {
+    "title": {
+      "part1": "Beautiful food & takeaway,",
+      "highlighted": "delivered",
+      "part2": "to your door."
+    },
+    "subtitle": "Enjoy restaurant-quality meals made with fresh ingredients. Delivered hot and ready whenever you are.",
+    "orderButton": "Place an Order",
+    "foodDeliveryAlt": "Food delivery"
+  },
+  "rating": {
+    "part1": "4.8 out of 5",
+    "part2": "based on 2000+ reviews"
+  },
+  "login": {
+    "title": "Log in",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "errors": {
+      "fillAllFields": "Please fill all the fields.",
+      "unknown": "An unknown error occurred"
+    }
+  },
+  "order": {
+    "title": "Finish your order",
+    "emptyCart": "Your cart is empty",
+    "street": "Street",
+    "house": "House",
+    "orderButton": "Order",
+    "successMessage": "Order placed successfully. Thanks for your order!"
+  },
+  "menu": {
+    "title": "Browse our menu",
+    "description": {
+      "part1": "Use our menu to place an order online, or",
+      "phone": "phone",
+      "phoneTooltip": "Call us at 123-456-789",
+      "part2": "our store",
+      "part3": "to place a pickup order. Fast and fresh food."
+    },
+    "seeMore": "See more"
+  },
+  "card": {
+    "addToCart": "Add to cart"
+  },
+  "footer": {
+    "tagline": {
+      "title": "Takeaway & Delivery",
+      "subtitle": "for small - medium businesses."
+    },
+    "columns": {
+      "company": {
+        "title": "Company",
+        "items": {
+          "home": "Home",
+          "order": "Order",
+          "faq": "FAQ",
+          "contact": "Contact"
+        }
+      },
+      "template": {
+        "title": "Template",
+        "items": {
+          "styleGuide": "Style Guide",
+          "changelog": "Changelog",
+          "licence": "Licence",
+          "webflowUniversity": "Webflow University"
+        }
+      },
+      "flowbase": {
+        "title": "Flowbase",
+        "items": {
+          "moreCloneables": "More Cloneables"
+        }
+      }
+    },
+    "socials": {
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "youtube": "YouTube"
+    }
+  }
+}

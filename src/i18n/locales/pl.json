@@ -1,0 +1,93 @@
+{
+  "header": {
+    "home": "Strona główna",
+    "menu": "Menu",
+    "company": "Firma",
+    "login": "Zaloguj się",
+    "logout": "Wyloguj się"
+  },
+  "home": {
+    "title": {
+      "part1": "Piękne jedzenie i na wynos,",
+      "highlighted": "dostarczone",
+      "part2": "do Twoich drzwi."
+    },
+    "subtitle": "Ciesz się posiłkami o jakości restauracyjnej, przygotowanymi ze świeżych składników. Dostarczane na gorąco i gotowe, kiedy tylko chcesz.",
+    "orderButton": "Złóż zamówienie",
+    "foodDeliveryAlt": "Dostawa jedzenia"
+  },
+  "rating": {
+    "part1": "4.8 na 5",
+    "part2": "na podstawie ponad 2000 recenzji"
+  },
+  "login": {
+    "title": "Zaloguj się",
+    "username": "Nazwa użytkownika",
+    "password": "Hasło",
+    "submit": "Wyślij",
+    "cancel": "Anuluj",
+    "errors": {
+      "fillAllFields": "Proszę wypełnić wszystkie pola.",
+      "unknown": "Wystąpił nieznany błąd"
+    }
+  },
+  "order": {
+    "title": "Dokończ zamówienie",
+    "emptyCart": "Twój koszyk jest pusty",
+    "street": "Ulica",
+    "house": "Dom",
+    "orderButton": "Zamów",
+    "successMessage": "Zamówienie złożone pomyślnie. Dziękujemy za zamówienie!"
+  },
+  "menu": {
+    "title": "Przeglądaj nasze menu",
+    "description": {
+      "part1": "Skorzystaj z naszego menu, aby złożyć zamówienie online, lub",
+      "phone": "zadzwoń",
+      "phoneTooltip": "Zadzwoń do nas pod numer 123-456-789",
+      "part2": "do naszego sklepu",
+      "part3": "aby złożyć zamówienie z odbiorem. Szybkie i świeże jedzenie."
+    },
+    "seeMore": "Zobacz więcej"
+  },
+  "card": {
+    "addToCart": "Dodaj do koszyka"
+  },
+  "footer": {
+    "tagline": {
+      "title": "Na wynos i z dostawą",
+      "subtitle": "dla małych i średnich firm."
+    },
+    "columns": {
+      "company": {
+        "title": "Firma",
+        "items": {
+          "home": "Strona główna",
+          "order": "Zamówienie",
+          "faq": "FAQ",
+          "contact": "Kontakt"
+        }
+      },
+      "template": {
+        "title": "Szablon",
+        "items": {
+          "styleGuide": "Przewodnik po stylu",
+          "changelog": "Dziennik zmian",
+          "licence": "Licencja",
+          "webflowUniversity": "Uniwersytet Webflow"
+        }
+      },
+      "flowbase": {
+        "title": "Flowbase",
+        "items": {
+          "moreCloneables": "Więcej klonów"
+        }
+      }
+    },
+    "socials": {
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "youtube": "YouTube"
+    }
+  }
+}

@@ -6,8 +6,10 @@ import { selectEnrichedOrderItems } from "../../features/cart/cartSelectors";
 import { OrderItem } from "../../components/OrderItem/OrderItem";
 import { useState } from "react";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 export const OrderPage = () => {
+  const { t } = useTranslation();
   useGetMealsQuery(undefined);
 
   const orderItems = useSelector(selectEnrichedOrderItems);
@@ -16,9 +18,9 @@ export const OrderPage = () => {
 
   return (
     <div className={clsx([styles.orderpage, styles["orderpage-background"]])}>
-      <h1 className={clsx("h1Title", styles.header)}>Finish your order</h1>
+      <h1 className={clsx("h1Title", styles.header)}>{t("order.title")}</h1>
       {orderItems.length === 0 ? (
-        <p className={styles.emptyCartMessage}>Your cart is empty</p>
+        <p className={styles.emptyCartMessage}>{t("order.emptyCart")}</p>
       ) : (
         <>
           <div className={styles.cardsWrapper}>
@@ -38,7 +40,7 @@ export const OrderPage = () => {
 
           <div className={styles.address}>
             <div className={styles.inputField}>
-              <label htmlFor="street">Street</label>
+              <label htmlFor="street">{t("order.street")}</label>
               <input
                 id="street"
                 type="text"
@@ -48,7 +50,7 @@ export const OrderPage = () => {
             </div>
 
             <div className={styles.inputField}>
-              <label htmlFor="house">House</label>
+              <label htmlFor="house">{t("order.house")}</label>
               <input
                 id="house"
                 type="text"
@@ -58,10 +60,8 @@ export const OrderPage = () => {
             </div>
 
             <Button
-              title="Order"
-              onClick={() =>
-                alert("Order placed successfully. Thanks for your order!")
-              }
+              title={t("order.orderButton")}
+              onClick={() => alert(t("order.successMessage"))}
             />
           </div>
         </>

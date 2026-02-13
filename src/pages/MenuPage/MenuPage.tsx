@@ -5,11 +5,13 @@ import { MealsList } from "../../components/MealsList/MealsList";
 import styles from "./MenuPage.module.css";
 import { useFetch } from "../../hooks/useFetch";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 const INITIAL_PAGE = 1;
 const MAX_PAGE_SIZE = 6;
 
 export const MenuPage = () => {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [page, setPage] = useState(INITIAL_PAGE);
 
@@ -45,18 +47,18 @@ export const MenuPage = () => {
   return (
     <div className={clsx([styles.menupage, styles["menupage-background"]])}>
       <div className={styles.info}>
-        <h1 className="h1Title">Browse our menu</h1>
+        <h1 className="h1Title">{t("menu.title")}</h1>
         <p className={styles.pageDescription}>
-          Use our menu to place an order online, or{" "}
+          {t("menu.description.part1")}{" "}
           <span
             className={`${styles.highlight} ${styles.tooltip}`}
-            data-tooltip="Call us at 123-456-789"
+            data-tooltip={t("menu.description.phoneTooltip")}
           >
-            phone
+            {t("menu.description.phone")}
           </span>{" "}
-          our store
+          {t("menu.description.part2")}
           <br />
-          to place a pickup order. Fast and fresh food.
+          {t("menu.description.part3")}
         </p>
       </div>
 
@@ -76,7 +78,7 @@ export const MenuPage = () => {
       <div className={styles.seeMoreContainer}>
         {canSeeMore && (
           <Button
-            title="See more"
+            title={t("menu.seeMore")}
             onClick={() => setPage((prevPage) => prevPage + 1)}
           />
         )}

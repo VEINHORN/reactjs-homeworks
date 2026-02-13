@@ -7,6 +7,7 @@ import clsx from "clsx";
 import Price from "./Price/Price";
 import Title from "./Title/Title";
 import type { Meal } from "../../types/mealType";
+import { useTranslation } from "react-i18next";
 
 type CardProps = Omit<Meal, "category"> & {
   className?: string;
@@ -22,6 +23,7 @@ export const Card = ({
   className,
   infoClassName,
 }: CardProps) => {
+  const { t } = useTranslation();
   const [itemsCount, setItemsCount] = useState(1);
   const dispatch = useDispatch();
 
@@ -52,7 +54,7 @@ export const Card = ({
             onChange={handleChange}
           />
           <Button
-            title="Add to card"
+            title={t("card.addToCart")}
             onClick={() => dispatch(addToCart({ id, itemsCount }))}
           />
         </div>
