@@ -1,6 +1,6 @@
 .menupage {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  width: 100%;
+  padding: clamp(3rem, 8vw, 6.25rem) 1rem;
 }
 
 .menupage-background {
@@ -12,6 +12,11 @@
 
 :root[data-theme="dark"] .menupage-background {
   background-image: none;
+}
+
+.info {
+  width: min(100%, 720px);
+  margin: 0 auto;
 }
 
 .pageDescription {
@@ -27,8 +32,11 @@
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin: 2rem auto 0;
 }
 
 .highlight {
@@ -47,7 +55,9 @@
   color: #fff;
   padding: 6px 10px;
   border-radius: 4px;
-  white-space: nowrap;
+  width: max-content;
+  max-width: min(280px, calc(100vw - 2rem));
+  white-space: normal;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease-in-out;

@@ -1,20 +1,54 @@
+.header {
+  width: 100%;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
+
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 .navLinksWrapper {
   display: flex;
-  justify-content: space-between;
-  gap: 5rem;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(1rem, 5vw, 5rem);
+  min-width: 0;
 }
 
 .btnWrapper {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navLinksWrapper {
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navLinksWrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btnWrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }

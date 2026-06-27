@@ -4,7 +4,9 @@
   justify-content: center;
   align-items: center;
 
+  width: 100%;
   min-height: 600px;
+  padding: clamp(3rem, 8vw, 6rem) 1rem;
 }
 
 .loginpage-background {
@@ -19,9 +21,9 @@
 }
 
 .login {
-  max-height: 283px;
+  width: min(100%, 640px);
 
-  padding: 40px;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
 
   border: 1px solid var(--primary-color-opaque-15);
   border-radius: 6px;
@@ -46,13 +48,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  width: 550px;
+  width: 100%;
 
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .input label {
-  width: 100px;
+  flex: 0 0 150px;
   text-align: left;
 
   color: var(--color-text-primary);
@@ -66,7 +68,8 @@
 }
 
 .input input {
-  min-width: 430px;
+  min-width: 0;
+  width: 100%;
   min-height: 45px;
 
   padding-left: 15px;
@@ -86,8 +89,24 @@
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
 
   padding-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input label {
+    flex-basis: auto;
+  }
+
+  .buttons {
+    gap: 0.75rem;
+  }
 }

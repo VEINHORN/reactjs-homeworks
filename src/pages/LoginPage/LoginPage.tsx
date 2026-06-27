@@ -45,8 +45,9 @@ export const LoginPage = () => {
 
         <form onSubmit={handleSubmit}>
           <div className={styles.input}>
-            <label>{t("login.username")}</label>
+            <label htmlFor="email">{t("login.username")}</label>
             <input
+              id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -54,8 +55,9 @@ export const LoginPage = () => {
           </div>
 
           <div className={styles.input}>
-            <label>{t("login.password")} </label>
+            <label htmlFor="password">{t("login.password")} </label>
             <input
+              id="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -63,11 +65,7 @@ export const LoginPage = () => {
           </div>
           <div className={styles.buttons}>
             <Button title={t("login.submit")} type="submit" />
-            <Button
-              title={t("login.cancel")}
-              outlined
-              onClick={handleCancel}
-            />
+            <Button title={t("login.cancel")} outlined onClick={handleCancel} />
           </div>
         </form>
       </div>
