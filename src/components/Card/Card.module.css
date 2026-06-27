@@ -1,7 +1,7 @@
 .card {
   display: flex;
+  width: 100%;
 
-  max-width: 520px;
   padding: 20px;
 
   background-color: var(--color-bg-secondary);
@@ -13,26 +13,31 @@
 .cardImage {
   display: flex;
   align-items: center;
+  flex: 0 0 120px;
 }
 
 .cardInfo {
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 0;
 
   padding-top: 5px;
   padding-left: 25px;
 }
 
 .cardImage img {
-  max-width: 120px;
-  max-height: 120px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .cardHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .cardDescription {
@@ -59,13 +64,15 @@
 
 .cardControl {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   gap: 0.5rem;
+  margin-top: auto;
 }
 
 .cardControl input {
-  max-width: 60px;
-  max-height: 45px;
+  width: 60px;
+  height: 45px;
   text-align: center;
   color: var(--color-text-primary);
   background-color: var(--color-bg-input);
@@ -78,4 +85,26 @@
   font-style: normal;
   letter-spacing: 0.36px;
   line-height: 27px;
+}
+
+@media (max-width: 560px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .cardImage {
+    justify-content: center;
+    flex-basis: auto;
+  }
+
+  .cardImage img {
+    width: min(100%, 220px);
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .cardInfo {
+    padding-top: 1rem;
+    padding-left: 0;
+  }
 }

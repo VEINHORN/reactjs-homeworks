@@ -33,23 +33,42 @@
   --color-border-outlined-button: #35b8be;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background-color: var(--color-bg-primary);
+}
+
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 
   background-color: var(--color-bg-primary);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
 .h1Title {
   font-family: Inter;
   font-weight: 400;
   font-style: normal;
-  font-size: 50px;
-  line-height: 55px;
-  letter-spacing: 1.65px;
+  font-size: clamp(2.25rem, 5vw, 3.125rem);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  margin: 0;
 
   color: var(--primary-color);
 }
